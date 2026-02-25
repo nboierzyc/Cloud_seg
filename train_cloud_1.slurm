@@ -32,7 +32,6 @@ master_addr=$(head -n 1 <<< "$nodes")
 export MASTER_ADDR="$master_addr"
 export MASTER_PORT=29500
 export NCCL_DEBUG=INFO
-# 若无 IB 或不确定，先禁用：
 export NCCL_IB_DISABLE=1
 export NCCL_SOCKET_IFNAME=^lo,docker0
 export OMP_NUM_THREADS=4
